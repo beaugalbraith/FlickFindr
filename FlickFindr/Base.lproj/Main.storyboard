@@ -111,6 +111,8 @@
                     <connections>
                         <outlet property="descriptionLabel" destination="lDR-TY-2mH" id="Nm7-fb-KTw"/>
                         <outlet property="flickrImage" destination="Y50-oi-9mP" id="yke-DU-hE8"/>
+                        <outlet property="latitudeField" destination="20A-YA-hR9" id="bfZ-0X-vAX"/>
+                        <outlet property="longitudeField" destination="cGa-25-tig" id="OfX-66-RDK"/>
                         <outlet property="mainLabel" destination="2Rw-3W-gUg" id="9fu-ec-ABh"/>
                         <outlet property="searchField" destination="uik-bB-EUV" id="hk3-fJ-Txi"/>
                     </connections>
