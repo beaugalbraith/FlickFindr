@@ -1,24 +1,126 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13156.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13137.5"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="AvenirNextCondensed.ttc">
+            <string>AvenirNextCondensed-Medium</string>
+            <string>AvenirNextCondensed-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FlickFindr" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="ncW-1B-XXf">
+                                <rect key="frame" x="20" y="40" width="335" height="607"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flick Finder" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Rw-3W-gUg">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="36"/>
+                                        <fontDescription key="fontDescription" name="AvenirNextCondensed-Medium" family="Avenir Next Condensed" pointSize="26"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Y50-oi-9mP">
+                                        <rect key="frame" x="0.0" y="40" width="335" height="420"/>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SKj-8Y-Lms">
+                                        <rect key="frame" x="0.0" y="464" width="335" height="32.5"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search Term" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uik-bB-EUV">
+                                                <rect key="frame" x="0.0" y="0.0" width="311" height="32.5"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bQL-Lv-5UA">
+                                                <rect key="frame" x="311" y="0.0" width="24" height="32.5"/>
+                                                <state key="normal" image="search-icon"/>
+                                                <connections>
+                                                    <action selector="termSearched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="odA-kp-XJR"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E8a-yQ-gVq">
+                                        <rect key="frame" x="0.0" y="500.5" width="335" height="32.5"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Latitude" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="20A-YA-hR9">
+                                                <rect key="frame" x="0.0" y="0.0" width="155.5" height="32.5"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Longitude" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cGa-25-tig">
+                                                <rect key="frame" x="155.5" y="0.0" width="155.5" height="32.5"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TjX-Q3-Wyj">
+                                                <rect key="frame" x="311" y="0.0" width="24" height="32.5"/>
+                                                <state key="normal" image="search-icon"/>
+                                                <connections>
+                                                    <action selector="latLonSearched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aaJ-Xl-FFf"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="20A-YA-hR9" firstAttribute="height" secondItem="cGa-25-tig" secondAttribute="height" id="KaN-JD-Mno"/>
+                                            <constraint firstItem="20A-YA-hR9" firstAttribute="width" secondItem="cGa-25-tig" secondAttribute="width" id="Sg3-gU-zld"/>
+                                        </constraints>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lDR-TY-2mH">
+                                        <rect key="frame" x="0.0" y="537" width="335" height="70"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="rWf-uz-WBK"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="bQL-Lv-5UA" firstAttribute="width" secondItem="TjX-Q3-Wyj" secondAttribute="width" id="GZ8-yS-aqY"/>
+                                    <constraint firstItem="SKj-8Y-Lms" firstAttribute="height" secondItem="E8a-yQ-gVq" secondAttribute="height" id="c5N-iO-ZNa"/>
+                                    <constraint firstItem="SKj-8Y-Lms" firstAttribute="width" secondItem="E8a-yQ-gVq" secondAttribute="width" id="ocV-XZ-FPX"/>
+                                    <constraint firstItem="bQL-Lv-5UA" firstAttribute="height" secondItem="TjX-Q3-Wyj" secondAttribute="height" id="uT6-hU-0Zl"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ncW-1B-XXf" secondAttribute="bottom" constant="20" id="DSK-aW-hLk"/>
+                            <constraint firstItem="ncW-1B-XXf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="SaE-cL-1cn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ncW-1B-XXf" secondAttribute="trailing" constant="20" id="U3P-aW-949"/>
+                            <constraint firstItem="ncW-1B-XXf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="tHE-wr-Cye"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="lDR-TY-2mH" id="Nm7-fb-KTw"/>
+                        <outlet property="flickrImage" destination="Y50-oi-9mP" id="yke-DU-hE8"/>
+                        <outlet property="mainLabel" destination="2Rw-3W-gUg" id="9fu-ec-ABh"/>
+                        <outlet property="searchField" destination="uik-bB-EUV" id="hk3-fJ-Txi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="search-icon" width="24" height="24"/>
+    </resources>
 </document>
