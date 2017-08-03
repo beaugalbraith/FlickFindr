@@ -15,10 +15,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--FlickrVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FlickFindr" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="FlickrVC" customModule="FlickFindr" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -98,9 +98,17 @@
                                     <constraint firstItem="bQL-Lv-5UA" firstAttribute="height" secondItem="TjX-Q3-Wyj" secondAttribute="height" id="uT6-hU-0Zl"/>
                                 </constraints>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BpW-eZ-XHf">
+                                <rect key="frame" x="166.5" y="323.5" width="42" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="BpW-eZ-XHf" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="3Tn-x0-qab"/>
+                            <constraint firstItem="BpW-eZ-XHf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="D8F-6d-iE5"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ncW-1B-XXf" secondAttribute="bottom" constant="20" id="DSK-aW-hLk"/>
                             <constraint firstItem="ncW-1B-XXf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="SaE-cL-1cn"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ncW-1B-XXf" secondAttribute="trailing" constant="20" id="U3P-aW-949"/>
@@ -111,10 +119,13 @@
                     <connections>
                         <outlet property="descriptionLabel" destination="lDR-TY-2mH" id="Nm7-fb-KTw"/>
                         <outlet property="flickrImage" destination="Y50-oi-9mP" id="yke-DU-hE8"/>
-                        <outlet property="latitudeField" destination="20A-YA-hR9" id="bfZ-0X-vAX"/>
-                        <outlet property="longitudeField" destination="cGa-25-tig" id="OfX-66-RDK"/>
-                        <outlet property="mainLabel" destination="2Rw-3W-gUg" id="9fu-ec-ABh"/>
+                        <outlet property="latLonSearchButton" destination="TjX-Q3-Wyj" id="mfi-6s-UtM"/>
+                        <outlet property="latitudeTextField" destination="20A-YA-hR9" id="cPL-Ac-2mb"/>
+                        <outlet property="longitudeTextField" destination="cGa-25-tig" id="e3e-2m-hrd"/>
+                        <outlet property="phraseSearchButton" destination="bQL-Lv-5UA" id="xH9-W6-lju"/>
+                        <outlet property="phraseTextField" destination="uik-bB-EUV" id="Gvg-Ab-Qd0"/>
                         <outlet property="searchField" destination="uik-bB-EUV" id="hk3-fJ-Txi"/>
+                        <outlet property="titleLabel" destination="2Rw-3W-gUg" id="gQd-7B-k9F"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
